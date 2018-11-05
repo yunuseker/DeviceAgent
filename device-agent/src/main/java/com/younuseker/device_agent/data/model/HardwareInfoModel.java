@@ -1,4 +1,4 @@
-package com.younuseker.device_agent.data;
+package com.younuseker.device_agent.data.model;
 
 /**
  * Created by yunuseker on 04.11.2018.
@@ -16,12 +16,11 @@ public final class HardwareInfoModel {
     private String display;
     private String bootloader;
     private String board;
-    private String serial;
 
     public HardwareInfoModel() {
     }
 
-    public HardwareInfoModel(String product, String model, String osVersion, String hardware, String manufacturer, String device, String brand, String display, String bootloader, String board, String serial) {
+    public HardwareInfoModel(String product, String model, String osVersion, String hardware, String manufacturer, String device, String brand, String display, String bootloader, String board) {
         this.product = product;
         this.model = model;
         this.osVersion = osVersion;
@@ -32,7 +31,6 @@ public final class HardwareInfoModel {
         this.display = display;
         this.bootloader = bootloader;
         this.board = board;
-        this.serial = serial;
     }
 
     public String getProduct() {
@@ -115,11 +113,4 @@ public final class HardwareInfoModel {
         this.board = board;
     }
 
-    public String getSerial() {
-        return serial;
-    }
-
-    public void setSerial(String serial) {
-        this.serial = serial;
-    }
 }

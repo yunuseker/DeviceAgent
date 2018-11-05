@@ -1,4 +1,4 @@
-package com.younuseker.device_agent.data;
+package com.younuseker.device_agent.data.model;
 
 /**
  * Created by yunuseker on 04.11.2018.
