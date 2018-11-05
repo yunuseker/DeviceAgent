@@ -5,7 +5,8 @@ import android.app.Application;
 import android.content.Context;
 
 import com.younuseker.device_agent.callback.Callback;
-import com.younuseker.device_agent.data.SensorInfoModel;
+import com.younuseker.device_agent.data.PrefDataManager;
+import com.younuseker.device_agent.data.model.SensorInfoModel;
 
 import java.util.List;
 
@@ -32,6 +33,7 @@ public final class DeviceAgent {
 
     private DeviceAgent(Context context) {
         this.context = context;
+        PrefDataManager.init(context);
         deviceManager = new DeviceManager(context);
     }
 
