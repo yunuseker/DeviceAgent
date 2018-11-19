@@ -6,6 +6,7 @@ import android.content.Context;
 
 import com.younuseker.device_agent.callback.Callback;
 import com.younuseker.device_agent.data.PrefDataManager;
+import com.younuseker.device_agent.data.model.MemoryInfoModel;
 import com.younuseker.device_agent.data.model.SensorInfoModel;
 
 import java.util.List;
@@ -46,6 +47,19 @@ public final class DeviceAgent {
             @Override
             public void run() {
                 callback.success(deviceManager.getSensorList());
+            }
+        }).start();
+    }
+
+    public MemoryInfoModel getMemoryInfo(){
+        return deviceManager.getMemoryInfo(context);
+    }
+
+    public void getMemoryInfoASync(final Callback<MemoryInfoModel> callback){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                callback.success(deviceManager.getMemoryInfo(context));
             }
         }).start();
     }

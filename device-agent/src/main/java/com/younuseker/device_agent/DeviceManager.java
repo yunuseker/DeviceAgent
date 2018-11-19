@@ -52,7 +52,7 @@ final class DeviceManager {
     /**
      * app info
      */
-    private List<ApplicationInfoModel> getApplicationsInfo(Context context) {
+    public List<ApplicationInfoModel> getApplicationsInfo(Context context) {
         List<ApplicationInfoModel> applicationEntityList = new ArrayList<>();
         PackageManager packageManager = context.getPackageManager();
 
@@ -97,7 +97,7 @@ final class DeviceManager {
     /**
      * memory info
      */
-    private MemoryInfoModel getMemoryInfo(Context context) {
+    public MemoryInfoModel getMemoryInfo(Context context) {
         MemoryInfoModel memoryEntity = new MemoryInfoModel();
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
