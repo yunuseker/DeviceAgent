@@ -35,4 +35,13 @@ HardwareInfo {
     String bootloader;
     String board;
     }
-    ```
+```
+### Sensor Data
+```java
+SensorInfoModel {
+    String type;
+    String vendor;
+    int version;
+    String name;
+    }
+```
